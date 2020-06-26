@@ -18,6 +18,7 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 }
+/*Header*/
 header{
 	position: absolute;
 	left: 0px;
@@ -84,11 +85,11 @@ header .navbar ul li a:hover::before{
 header .navbar ul li a.active::before{
 	width: 100%;
 	left: 0;
-
+/*Home Section*/
 }
 .home{
 	min-height: 100vh;
-	background-image: url("1.jpg");
+	background-image: url("images/1.jpg");
 	background-size: cover;
 	background-position: center;
 	padding: 15px;
@@ -113,7 +114,7 @@ header .navbar ul li a.active::before{
 .home .home-content .block h6{
 	color: #ffffff;
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: 200;
 	margin: 0;
 	padding: 0;
 }
@@ -152,10 +153,122 @@ header .navbar ul li a.active::before{
 	color: #ffffff;
 }
 
-.section-title{
-	width:100%;
+/*About Me*/
+.about-me{
+	padding: 45px 15px;
+	background-color: #000000;
+
 }
 
-.info{
-	word-wrap: break-word;
+.about-me .section-title{
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+.about-me .section-title h1{
+	display: inline-block;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight:700;
+	color: #ffffff;
+	margin: 0 0 5px;
+	position: relative;
+}
+.about-me .section-title h1:before{
+	content: '';
+	left: 0;
+	position: absolute;
+	height: 2px;
+	right: 20%;
+	background-color: red;
+	bottom: 0px;
+}
+.about-me .section-title p.small{
+	display: block; 
+	font-size: 14px;
+	color: #838383;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+
+.about-me .about-content{
+}
+
+.about-me .about-content .img{
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+}
+
+.about-me .about-content .img img{
+	width: 91%;
+	display: block;
+}
+
+.about-me .about-content .text{
+	flex: 0 0 66.66%;
+	max-width: 66.66%;
+	padding-left: 30px;
+}
+
+.about-me .about-content .text h4{
+	font-size: 35px;
+	font-weight: 600;
+	margin: 0 0 5px;
+	color: #ffffff;
+	position: relative;
+}
+.about-me .about-content .text h4:before{
+	content: '';
+	left: 0;
+	position: absolute;
+	height: 2px;
+	right: 5%;
+	background-color: red;
+	bottom: 0px;
+}
+.about-me .about-content .text h6{
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0 0 15px;
+	color: #ffffff;
+}
+.about-me .about-content .text h6 span{
+	color: red;
+}
+
+.about-me .about-content .text p{
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #838383;
+	margin: 0 0 20px;
+}
+
+.about-me .about-content .text .info{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+.about-me .about-content .text .info .list{
+	flex: 0 0 calc(50% - 15px);
+	max-width: calc(50% - 15px);
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #dee2e6;
+	padding-bottom: 10px;
+
+}
+.about-me .about-content .text .info .list label{
+	padding-right: 10px;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 15px; 
+}
+.about-me .about-content .text .info .list p{
+	margin: 0;
+
 }
