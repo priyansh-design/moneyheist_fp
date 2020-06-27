@@ -159,6 +159,7 @@ header .navbar ul li a.active::before{
 	padding: 45px 15px;
 	background-color: #000000;
 
+
 }
 
 .about-me .section-title{
@@ -246,6 +247,8 @@ header .navbar ul li a.active::before{
 	margin: 0 0 20px;
 }
 
+
+
 .about-me .about-content .text .info{
 	display: flex;
 	flex-wrap: wrap;
@@ -271,8 +274,8 @@ header .navbar ul li a.active::before{
 }
 .about-me .about-content .text .info .list p{
 	margin: 0;
-
 }
+
 
 section.character{
   background: #fff;
@@ -410,5 +413,6 @@ div.containerchar{
   bottom: -8px;
 
 }
+
 
 
