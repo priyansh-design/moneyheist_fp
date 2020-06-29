@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Money Heist</title>
-	<meta name="viewport" content="width=device-width, intial-scale-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" type="text/css" href="swiper.min.css"></link>
 	<link rel="stylesheet" href="style.css">
@@ -20,7 +20,7 @@
 						<li><a href="" class="active">Home</a></li>
 						<li><a href="#abt">About</a></li>
 						<li><a href="#char">Characters</a></li>
-						<li><a href="">Trailers</a></li>
+						<li><a href="#vid">Videos</a></li>
 						<li><a href="">Contact</a></li>
 		            </ul>
 		        </div>
@@ -47,7 +47,7 @@
 		</section>
 		<!-- End Home -->
 		<!-- Start About -->
-		<section id="abt" class="about-me">
+		<section id="abt" class="about-me js--section-about">
 			<div class="container">
 				<div class="row">
 					<div class="section-title">
@@ -240,10 +240,10 @@
 				    </div>    
 				</div>    
 			</div>	
-		</section>
+        </section>
 		
 		<!-- Videos section -->
-		<section class="clips">
+		<section class="clips" id="vid">
 			<div class="header">
 				<h1>
 					Videos
@@ -453,8 +453,8 @@
 		</section>
     </div>		
 	<script
-	src="/jquery-3.5.1.js"
-  ></script>
+     src="/jquery-3.5.1.js"
+    ></script>
   <script src="/tilt.jquery.js"></script>
   <script>
 	$(document).ready(function () {
@@ -469,7 +469,10 @@
 	  });
 	});
   </script>
-<script type="text/javascript" src="swiper.min.js"></script>
-<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript" src="/swiper.min.js"></script>
+<script type="text/javascript" src="/js.js"></script>
+<script type="text/javascript" src="/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>

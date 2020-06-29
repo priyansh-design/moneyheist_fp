@@ -1,8 +1,8 @@
-var swiper = new Swiper('.swiper-container', {
-  effect: 'coverflow',
+var swiper = new Swiper(".swiper-container", {
+  effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   coverflowEffect: {
     rotate: 15,
     stretch: 0,
@@ -10,12 +10,11 @@ var swiper = new Swiper('.swiper-container', {
     modifier: 1,
     slideShadows: true,
   },
-  loop:true,
-  
+  loop: true,
+
   pagination: {
-    el: '.swiper-pagination',
-    clickable:true,
-    dynamicBullets:true,
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
-  
 });
