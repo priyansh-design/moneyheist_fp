@@ -98,7 +98,6 @@ header .navbar ul li a:active::before {
   min-height: 100vh;
   background-image: url("images/1.jpg");
   background-attachment: fixed;
-
   background-size: cover;
   background-position: center;
   padding: 15px;
@@ -404,10 +403,14 @@ div.containerchar {
 /* Video section */
 
 .clips {
-  margin: 0 6.7vw;
   font-family: "Exo 2", sans-serif;
   color: #d8d8d8c9;
   padding: 1%;
+  min-height: 100vh;
+  background-image: url("/images/wallpaper-lookin-up.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .clips .header h1 {
@@ -416,7 +419,7 @@ div.containerchar {
   text-transform: uppercase;
   font-weight: 300;
   color: #ffffff;
-  margin: 0 0 5px;
+  margin: 0 0 1% 7%;
   position: relative;
 }
 .clips .header h1:before {
@@ -440,6 +443,7 @@ div.containerchar {
   font-weight: 400;
   color: #fff;
   margin-bottom: 60px;
+  padding-top: 40px;
 }
 
 .clips h3 {
@@ -576,10 +580,14 @@ div.containerchar {
 }
 
 .play-button .polygon {
-  fill: #ff3030;
-  transition: transform 0.5s, fill 0.2s;
+  fill: #ff30307a;
+  transition: transform 0.5s;
   transition-timing-function: cubic-bezier(0.7, 0.01, 0.37, 1);
   transform-origin: 50% 50%;
+}
+
+polygon {
+  fill: #d8d8d8;
 }
 
 .card {
@@ -589,7 +597,8 @@ div.containerchar {
   position: relative;
   max-width: 32%;
   width: 100%;
-  height: 30%;
+  max-height: 34%;
+  height: 100%;
   padding: 3% 10%;
   box-shadow: 0 16px 24px 2px rgba(255, 0, 0, 0.219),
     0 6px 30px 5px rgba(255, 0, 0, 0.158),
@@ -597,6 +606,7 @@ div.containerchar {
   background-size: cover;
   cursor: pointer;
   margin: 4% 7%;
+  filter: contrast(120%) brightness(160%);
 }
 
 .card:before {
@@ -684,7 +694,6 @@ div.containerchar {
   max-width: 32px;
   filter: invert(0);
   background-color: black;
-  transition: filter 0.1s;
   border-radius: 50%;
   padding: 0.5%;
 }
