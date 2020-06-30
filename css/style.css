@@ -96,7 +96,7 @@ header .navbar ul li a:active::before {
 /*Home Section*/
 .home {
   min-height: 100vh;
-  background-image: url("images/1.jpg");
+  background-image: url("/images/1.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -407,10 +407,12 @@ div.containerchar {
   color: #d8d8d8c9;
   padding: 1%;
   min-height: 100vh;
-  background-image: url("/images/wallpaper-lookin-up.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #000),
+    url(/images/wallpaper-lookin-up.jpg);
+  min-height: 100vh;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
 }
 
 .clips .header h1 {
@@ -712,6 +714,7 @@ polygon {
 /*Scroll Bar*/
 ::-webkit-scrollbar {
   width: 12px;
+  visibility: hidden;
 }
 
 ::-webkit-scrollbar-thumb {
