@@ -19,6 +19,11 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    overflow: hidden;
+}
+
+.header p {
+    display: inline-block;
 }
 
 .clips .header h1 {
@@ -103,6 +108,14 @@ body {
 
 .roll-up > span:nth-child(7) {
     transition-delay: 0.21s;
+}
+
+.roll-up > span:nth-child(8) {
+    transition-delay: 0.24s;
+}
+
+.roll-up > span:nth-child(9) {
+    transition-delay: 0.27s;
 }
 
 .roll-up > span > span {
@@ -193,6 +206,7 @@ body {
     transition: transform 0.5s;
     transition-timing-function: cubic-bezier(0.7, 0.01, 0.37, 1);
     transform-origin: 50% 50%;
+    cursor: pointer;
 }
 
 polygon {
@@ -206,7 +220,7 @@ polygon {
     position: relative;
     max-width: 32%;
     width: 100%;
-    height: 240px;
+    height: 250px;
     padding: 3% 10%;
     box-shadow: 0 16px 24px 2px rgba(255, 0, 0, 0.219),
         0 6px 30px 5px rgba(255, 0, 0, 0.158),
@@ -215,6 +229,7 @@ polygon {
     cursor: pointer;
     margin: 4% 7%;
     filter: contrast(120%);
+    cursor: initial;
 }
 
 .card:before {
@@ -236,7 +251,7 @@ polygon {
     position: absolute;
     bottom: 20px;
     right: 0;
-    margin-right: -80px;
+    margin-right: -70px;
     text-align: left;
     max-width: 175px;
 }
@@ -282,24 +297,22 @@ polygon {
     backdrop-filter: blur(5px);
 }
 
-
 .trailer video {
     position: relative;
     max-width: 900px;
     outline: none;
 }
 
-
 .close {
-    position: absolute;
-    top: 4%;
-    right: 4%;
-    cursor: pointer;
-    max-width: 32px;
-    filter: invert(0);
-    background-color: black;
-    border-radius: 50%;
-    padding: 0.5%;
+  position: absolute;
+  top: 11%;
+  right: 15%;
+  cursor: pointer;
+  max-width: 36px;
+  filter: invert(0);
+  background-color: black;
+  border-radius: 50%;
+  padding: 0.5%;
 }
 
 .close:hover,
@@ -313,11 +326,11 @@ polygon {
     }
 }
 
-
 /*Scroll Bar*/
 ::-webkit-scrollbar {
     width: 12px;
     visibility: collapse;
+    /*opacity: 0;*/
 }
 
 ::-webkit-scrollbar-thumb {
