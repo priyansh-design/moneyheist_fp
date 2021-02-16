@@ -33,7 +33,7 @@
         <!-- End Header -->
 
         <!-- Start Home -->
-        <section class="home">
+        <section class="home" style="background-image: url(images/1.jpg);">
             <div class="container">
                 <div class="row full-screen ">
                     <div class="home-content">
@@ -111,7 +111,7 @@
         <!--End of About-->
         <!--Start of Characters-->
         <section id="char" class="character">
-            <div class="containerchar">
+            <div class="containerchar" id="blur">
 
                 <div class="header">
                     <h1>
@@ -125,7 +125,10 @@
                             <div class="swiper-slide">
                                 <div class="imgc" style="background-image: url(images/tokyo.jpeg);">
                                     <div class="textc">
-                                        <h3>TOKYO<br><span><a href="#">Read More</a></span></h3>
+                                        <h3>TOKYO<br>
+                                            <span><a href="#char" onclick="t()">Read More</a>
+                                            </span>
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
@@ -243,10 +246,67 @@
                     </div>
                 </div>
             </div>
+            <div class="popup" id="tokyo">
+                <div class="popup-header">
+                    <div class="title">tokyo</div>
+                    <button class="close-button" onclick="tc()">&times;</button>
+                </div>
+                <div class="popup-body">
+                    <div class="rowp">
+                            <div class="textp">
+                                <p><b>Silene Oliveira</b> ,better known by her code-name Tokyo,is one of the main protogonists of the Netflix series<em> Money Heist</em> ,as well as the narator of the story.She is a member of the heist crew set to rob the Royal Mint of Spain.</p>
+                                <br><br><br>
+                                <h3>Personality<br></h3>
+                                <p>Tokyo is an intersting character. She can be very impulsive and immature at times letting her relationship with Rio complicated the plans a number of times.Tokyo is confident and doesn't mind using her looks and sexuality to her advantage.However,her love for Rio is genuine which shows how she can be very protective and loving with the people she truly care.</p>
+                            </div>
+                            <div class="imgp">
+                                <div class="subhead">
+                                    <h1>Tokyo</h1>
+                                </div>
+                                <div class="subcontent">
+                                    <img class="tokyo" src="images/tokyopopup.jpg">
+                                </div>
+                                
+                                <div class="subhead2">
+                                    <h1>Biographical information</h1>
+                                </div>
+                                <div class="subcontent2">
+                                    <p><span>Full name    :</span>Sileni Olivera</p>
+                                </div>
+                                
+                                <div class="subhead">
+                                    <h1>Familial information</h1>
+                                </div>
+                                <div class="subcontent2">
+                                    <p><span>Lovers    :</span>Rio(ex-boyfriend)</p>
+                                    <p><span>Parents    :</span> Unnamed mother</p>
+                                </div>
+                                <div class="subhead">
+                                    <h1>Professional information</h1>
+                                </div>
+                                <div class="subcontent2">
+                                    <p><span>Occuaption    :</span>Robber</p>
+                                    <p><span >Affiliation    :</span>Royal Mint of Spain robbers<br>
+                                    Bank of Spain robbers</p>
+                                </div>
+                                <div class="subhead">
+                                    <h1>Apperences</h1>
+                                </div>
+                                <div class="subcontent2">
+                                    <p><span>First    :</span>     Episode 1(Part 1)</p>
+                                    <p><span>Last    :</span>      The Paris Plan</p>                           
+                                    <p><span>Parts    :</span>     1,2,3,4</p>
+                                    <p><span>Portrayed by    :</span>Ursula Corbero</p>
+
+                                </div>  
+                            </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Videos section -->
-        <section class="clips" id="vid">
+        <section class="clips" id="vid" style="background-image: url(images/wallpaper-lookin-up.jpg);">
             <div class="header">
                 <h1>
                     Videos
@@ -394,6 +454,52 @@
             </div>
         </section>
     </div>
+    <!-- Start Footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                <h2>Ajay</h2> 
+                <div class="social">
+                    <a href=""><i class="fa fa-github"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+                <div class="logo">
+                <h2>Priyansh</h2> 
+            <div class="social">
+                <a href=""><i class="fa fa-github"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+
+                <div class="logo">
+                <h2>Tushar</h2> 
+            <div class="social">
+                <a href=""><i class="fa fa-github"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+    <script type="text/javascript" src="JS/min.js"></script>
+</footer>
+<!-- End Footer -->
+<!-- Start Copyright -->
+<section class="copyright">
+    <div class="copyright">
+        <p>&copy; 2020 copyright all rights reserved</p>
+    </div>
+</section>        
+<!-- End Copyright -->
+
     <script src="JS/jquery-3.5.1.js"></script>
     <script src="JS/tilt.jquery.js"></script>
     <script>

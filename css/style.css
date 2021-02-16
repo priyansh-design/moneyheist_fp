@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: #000000;
+  
 }
+
 
 * {
   box-sizing: border-box;
@@ -351,13 +354,16 @@ header .navbar ul li a:active::before {
 }
 
 section.character {
-  background: #fff;
+  background: black;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   padding: 45px 15px;
   margin: 0px;
-  background-color: black;
+  
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .swiper-container {
@@ -373,17 +379,23 @@ section.character {
   width: 300px;
   height: 370px;
   background-color: white;
+  box-shadow: 0px 0px 15px 1px rgba(255,255,255,1);
 
   border-color: yellow;
   border: 20px;
 }
 
 .swiper-slide-active {
-  box-shadow: 0px 0px 15px 1px rgba(255, 0, 0, 1);
+  box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 1);
 }
 
+.swiper-slide-active  .textc{
+  opacity: 0.8;
+}
+
+
 .swiper-pagination-bullet {
-  background-color: red;
+  background-color: black;
 }
 
 .swiper-pagination {
@@ -394,7 +406,7 @@ section.character {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 370px;
+  height: 100%;
   position: relative;
 }
 
@@ -408,15 +420,15 @@ section.character {
   background-color: black;
   width: 100%;
   opacity: 0;
-  height: 50px;
-  transition: all ease 0.3s;
+  height: 52.8px;
+  /*transition: all ease 0.3s;*/
 }
 
-.textc:hover {
+/*.textc:hover {
   opacity: 0.8;
   cursor: pointer;
   height: 52.8px;
-}
+}*/
 
 .textc h3 :hover {
   opacity: 1;
@@ -452,14 +464,24 @@ section.character {
 }
 
 div.containerchar {
-  margin-left: 6.7vw;
-  margin-right: 6.7vw;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+.containerchar.active{
+  filter: blur(20px);
+  pointer-events: none;
+
+
 }
 
 .header {
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 20px;
+  margin-left: 6.7vw;
+  margin-right: 6.7vw;
 }
 
 .header h1 {
@@ -482,6 +504,239 @@ div.containerchar {
   bottom: -8px;
 }
 
+/*popup section*/
+
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  transition: 300ms ease-in-out;
+  box-shadow: 0px 0px  15px 1px rgba(255,255,255,1);
+  border-radius: 10px;
+  z-index: 10;
+  background-color:rgba(0,0,0,1);
+  width: 700px;
+  max-width: 85%;
+  overflow: scroll;
+  max-height: 80%;
+  overflow-x: hidden;
+
+  
+
+
+}
+
+.popup.active{
+  transform: translate(-50%,-50%) scale(1);
+
+}
+
+.popup-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*border-bottom: 1px solid black;*/
+
+}
+
+.popup-header .title{
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;s
+  
+  padding-left: auto;
+  text-transform:uppercase;
+  position: relative;
+
+}
+
+.popup-header .title:before{
+  content: '';
+  left: 0;
+  position: absolute;
+  height: 2px;
+  right: 20%;
+  background-color: red;
+  bottom: -1px;
+
+}
+
+.close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color:white;
+}
+
+.close-button:hover{
+  border-radius: 100%;
+  background-color: white;
+  color: black;
+
+}
+
+.popup-body{
+  padding: 15px 30px;
+  color: white;
+  
+  
+  
+  
+}
+
+
+.textp{
+  
+  width: 48%;
+  line-height: 20px;
+  display: inline-block;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  font-size: 20px;
+  color: white;
+
+
+  
+}
+.textp p:nth-child(1){
+  margin-top: 70px;
+}
+.textp p{
+  border-right: 1px solid rgba(255,255,255,0.3);
+  padding-right: 7px;
+  word-spacing: 3px;
+  line-height: 25px;
+}
+
+.textp p em{
+  color: yellow;
+}
+
+.textp  h3{
+  color: red;
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+.textp p b{
+  font-size: 21px;
+}
+
+.imgp{
+  
+  width: 48%;
+  display: inline-block;
+  
+  margin-left: 51%;
+  box-shadow: 0px 0px 30px black;
+}
+
+
+.content{
+  padding: 10px;
+  
+  position: relative;
+  
+  
+}
+
+.rowp{
+  position: relative;
+}
+
+.subhead{
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  height: 30px;
+  text-align: center;
+}
+
+.subhead2{
+  margin-top: 0px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  height: 30px;
+}
+.subcontent{
+  
+  color:white;
+  height: 400px;
+
+
+}
+
+.subcontent2 p{
+
+  color: yellow;
+  
+  padding-top: 4.8px;
+  padding-bottom: 4.8px;
+  font-size: 13px;
+  text-shadow: none;
+  position: relative;
+  text-align: right;
+  margin-right: 15px;
+
+
+
+}
+
+
+.subcontent2 span{
+  font-weight: bold;
+  color: white;
+  margin-right: 40px;
+  
+  margin-left: 5px;
+  position: absolute;
+  left: 0px;
+  
+}
+
+
+.subhead h1,.subhead2 h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+.subcontent2 span{
+  margin-bottom: 4.8px;
+} 
+
+.subhead h1,.subhead2 h1{
+  padding-top: 4px;
+  font-size: 1.65em;
+
+} 
+
+.tokyo{
+  width: 100%;
+  height: 100%;
+}
+
+
+::-webkit-scrollbar {
+  width: 9px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ff1e00);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #00b7ff);
+}
 /* Video section */
 
 .clips {
@@ -799,7 +1054,7 @@ polygon {
 
 /*Scroll Bar*/
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 9px;
   visibility: hidden;
   opacity: 0;
 }
@@ -811,4 +1066,64 @@ polygon {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(transparent, #00b7ff);
+}
+/*Footer*/
+footer{
+  padding: 80px 15px;
+  background-color: #0c0c17;
+}
+footer h2{
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  height: 100px;
+}
+footer .logo{
+  width: 33%;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 600;
+  position: relative;
+}
+
+footer .social{
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  background-color: #0c0c17;
+  position: absolute;
+  height: 5px;
+}
+
+footer .social a i{
+  color: #999999;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 5px;
+  transition: all .5s ease;
+  text-decoration: none;
+  width: 10%;
+  height: 100%;
+  font-size: 20px;
+}
+footer .social a i:hover{
+  color: #ffffff;
+}
+  
+
+/*copyright*/
+.copyright{
+  background-color: #0c0c17;
+  border-top: 1px solid #1d1d27;
+}
+.copyright p{
+  color: #838383;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+
 }
